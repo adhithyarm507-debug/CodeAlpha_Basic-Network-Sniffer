@@ -248,19 +248,10 @@ def main():
         
     except PermissionError:
         print("\n✗ Error: Administrator privileges required!")
-        print("  On Windows: Right-click PowerShell → 'Run as Administrator'")
-        print("  On Linux/Mac: Run with 'sudo'")
         sys.exit(1)
         
     except Exception as e:
         print(f"\n✗ Error: {type(e).__name__}: {e}")
-        print("\n⚠ Requirements:")
-        print("  1. Administrator/root privileges")
-        print("  2. Scapy library: pip install scapy")
-        print("  3. On Windows: Npcap (https://nmap.org/npcap/)")
-        print("  4. On Linux: libpcap (usually pre-installed)")
-        print("  5. On macOS: Command Line Tools (xcode-select --install)")
-        print("\nFor help, run: python \"BASIC NETWORK SNIFFER.py\" -h")
         sys.exit(1)
 
 if __name__ == "__main__":
