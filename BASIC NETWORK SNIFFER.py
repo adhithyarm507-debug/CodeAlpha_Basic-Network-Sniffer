@@ -75,7 +75,7 @@ def packet_callback(packet):
             proto_name = f"Other ({protocol})"
             payload = bytes(packet.payload) if packet.payload else b""
         
-        # Store packet data
+        
         packet_info.update({
             'src_ip': ip_src,
             'dst_ip': ip_dst,
