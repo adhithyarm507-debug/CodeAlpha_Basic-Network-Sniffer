@@ -176,87 +176,8 @@ def list_interfaces():
     return []
 
 def print_help():
-    help_text = """
-    ╔══════════════════════════════════════════════════════════════╗
-    ║       NETWORK PACKET SNIFFER - Advanced Edition             ║
-    ║               Usage Guide & Examples                         ║
-    ╚══════════════════════════════════════════════════════════════╝
-
-    DESCRIPTION:
-      Captures and analyzes network packets in real-time with detailed
-      protocol information, IP statistics, and packet payload analysis.
-
-    USAGE:
-      python "BASIC NETWORK SNIFFER.py" [OPTIONS] [PACKET_LIMIT]
-
-    OPTIONS:
-      -h, --help              Show this help message and exit
-      -l, --list              List available network interfaces
-      -i, --interface IFACE    Specify network interface to sniff on
-                              (default: system default interface)
-
-    ARGUMENTS:
-      PACKET_LIMIT            Maximum number of packets to capture
-                              (default: unlimited, press Ctrl+C to stop)
-
-    EXAMPLES:
-      1. List available interfaces:
-         python "BASIC NETWORK SNIFFER.py" --list
-
-      2. Capture packets on default interface:
-         python "BASIC NETWORK SNIFFER.py"
-
-      3. Capture 100 packets:
-         python "BASIC NETWORK SNIFFER.py" 100
-
-      4. Capture on specific interface (Windows):
-         python "BASIC NETWORK SNIFFER.py" --interface "Ethernet"
-
-      5. Capture 50 packets on specific interface:
-         python "BASIC NETWORK SNIFFER.py" --interface "Ethernet" 50
-
-    FEATURES:
-      • Real-time packet capture and display
-      • Protocol analysis (TCP, UDP, ICMP, etc.)
-      • Source/Destination IP and Port tracking
-      • TTL (Time To Live) analysis
-      • TCP flags detection
-      • Payload preview (UTF-8 text or hex)
-      • Detailed statistics report
-      • CSV export of captured packets
-      • Cross-platform support (Windows, Linux, macOS)
-
-    REQUIREMENTS:
-      • Python 3.6+
-      • Scapy library: pip install scapy
-      • Administrator/root privileges
-      • Windows: Npcap (https://nmap.org/npcap/)
-      • Linux: libpcap (usually pre-installed)
-      • macOS: Command Line Tools
-
-    STATISTICS REPORT:
-      After stopping (Ctrl+C), the tool displays:
-      • Total packets captured
-      • Protocol distribution (TCP/UDP/ICMP/Other)
-      • Top 5 source IPs
-      • Top 5 ports in use
-
-    CSV EXPORT:
-      Captured packets can be saved to CSV with columns:
-      Timestamp, Packet#, Size, SrcIP, DstIP, SrcPort, DstPort,
-      Protocol, TTL, Flags, PayloadSize
-
-    TROUBLESHOOTING:
-      • "Permission denied": Run with Administrator privileges (Windows)
-                            or sudo (Linux/macOS)
-      • "No module named scapy": Install with: pip install scapy
-      • "No interfaces found": Check network adapter status
-      • No packets captured: Check firewall settings
-
-    AUTHOR: CodeAlpha Project
-    VERSION: 1.0.0 (Advanced Edition)
-    """
-    print(help_text)
+    print("Network Packet Sniffer - Advanced Edition")
+    print("Use -l or --list to show network interfaces")
 
 def main():
     
